@@ -16,7 +16,7 @@ class average_filter():
         
             self.cv_window_name=self.node_name
             cv.NamedWindow(self.cv_window_name,cv.CV_WINDOW_NORMAL)
-            cv.MoveWindow(self.cv_window_name, 400, 75)
+            cv.MoveWindow(self.cv_window_name, 800, 75)
 
             self.bridge = CvBridge()
             self.image_sub=rospy.Subscriber("input_rgb_image", Image, self.callback,queue_size=1)
