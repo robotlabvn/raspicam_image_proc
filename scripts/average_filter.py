@@ -8,7 +8,7 @@ from sensor_msgs.msg import Image, CameraInfo
 from cv_bridge import CvBridge,CvBridgeError
 import numpy as np
 
-class convolution_image():
+class average_filter():
     def __init__(self,node_name):
             self.node_name= node_name
             rospy.init_node(self.node_name)
@@ -53,8 +53,8 @@ class convolution_image():
         
 if __name__== "__main__":
         try:
-          node_name = "convolution_image"
-          convolution_image(node_name)
+          node_name = "average_filter"
+          average_filter(node_name)
           rospy.spin()
         except KeyboardInterrupt:
           print("Shutting down")
