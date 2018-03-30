@@ -43,11 +43,11 @@ class convolution_image():
                       rospy.signal_shutdown("User hit the q key to quit")
             
      def process_image(self, frame):
-     				grey = cv2.cvtColor(frame, cv.CV_BGR2GRAY)
-     				blur = cv2.blur(grey,(3,3))
-     				return blur
+     		grey = cv2.cvtColor(frame, cv.CV_BGR2GRAY)
+     		blur = cv2.blur(grey,(3,3))
+     		return blur
  
-    def cleanup(self):
+     def cleanup(self):
             print "shouting down of Vision Node"
             cv2.destroyAllWindowns()
         
