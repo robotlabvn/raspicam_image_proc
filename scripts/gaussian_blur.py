@@ -44,8 +44,8 @@ class gaussian_blur():
             
     def process_image(self, frame):
      	    grey = cv2.cvtColor(frame, cv.CV_BGR2GRAY)
-     	    blur = cv2.blur(grey,(3,3))
-     	    return blur
+     	    gaussian = cv2.GaussianBlur(grey, (5,5),0)
+     	    return gaussian
  
     def cleanup(self):
             print "shouting down of Vision Node"
