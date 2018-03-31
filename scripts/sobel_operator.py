@@ -10,7 +10,7 @@ import numpy as np
 
 scale =1
 delta = 0
-ddepth =cv2.CV2_16S
+ddepth = cv2.CV_16S
 
 class sobel_operator():
     def __init__(self,node_name):
