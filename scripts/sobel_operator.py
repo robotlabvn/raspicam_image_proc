@@ -12,7 +12,7 @@ scale =1
 delta = 0
 ddepth =cv2.CV2_16S
 
-class convolution_image():
+class sobel_operator():
     def __init__(self,node_name):
             self.node_name= node_name
             rospy.init_node(self.node_name)
@@ -66,8 +66,8 @@ class convolution_image():
         
 if __name__== "__main__":
         try:
-          node_name = "convolution_image"
-          convolution_image(node_name)
+          node_name = "sobel_operator"
+          sobel_operator(node_name)
           rospy.spin()
         except KeyboardInterrupt:
           print("Shutting down")
