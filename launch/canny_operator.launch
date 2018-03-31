@@ -1,0 +1,13 @@
+<launch>
+
+   <arg name="display_cam" default="true" />
+  <!-- Spawn Image Transport node -->
+  <node name="republish" pkg="image_transport" type="republish" output="screen"
+    args="compressed in:=/raspicam_node/image raw out:=/camera/rgb/image_raw"
+    if="$(arg display_cam)" />
+
+  <node pkg="raspicam_image_proc" name="canny_operator" type="canny_operator.py" output="screen">
+    <remap from="input_rgb_image" to="/camera/rgb/image_raw" />
+  </node>
+
+</launch>
